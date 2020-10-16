@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Funcionarios</title>
+    <?php
+        echo $this->headLink()
+        ->prependStylesheet($this->basePath('css/style.css'))
+        ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+        ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'));
+
+        echo $this->headScript()
+        ->prependFile($this->basePath('js/jquery.min.js'))
+        ->prependFile($this->basePath('js/bootstrap.min.js'))
+    ?>
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-default">
+        <div class="navbar-head">
+            <a href="/" class="navbar-brand">Vikings</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="<?= $this->url('application',['action' => 'Index'])?>">Listar de funcionarios</a></li>
+            <li><a href="<?= $this->url('application',['action' => 'cadastrar'])?>">Cadastro de funcionarios</a></li>
+        </ul>
+    </header>
+    <main class="conteudo">
+        <?php
+            
+            echo $this->flashMessenger()->render('default', array('alert', ' nav alert-info'));
+            echo $this->flashMessenger()->render('success', array('alert', ' nav alert-success'));
+            echo $this->content;
+        ?>
+    </main>
+    <footer class="rodape">
+        Todos os direitos reservados.
+    </footer>
+</body>
+</html>

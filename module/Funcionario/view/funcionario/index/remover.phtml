@@ -1,0 +1,7 @@
+<h1>Remover Funcionario<h1>
+<form method="post" action="<?= $this->url('application', ['action' => 'remover']);?>">
+    <input type="hidden" value=<?= $id;?> name="id">
+    <p class="alert alert-danger">Deseja realmente remover esse funcionario da lista?</p>
+    <input type="Submit" value="Sim" class="btn btn-danger">
+    <a href="<?= $this->url('application'); ?>" class="btn btn-primary">Não</a>
+</form>

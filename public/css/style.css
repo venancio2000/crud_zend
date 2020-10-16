@@ -1,0 +1,12 @@
+.rodape {
+  background: #333;
+  color:fff;
+  text-align: center;
+  padding:20px 0;
+}
+.conteudo {
+  padding: 20px;
+}
+p {
+  font-size: 12px;
+}
